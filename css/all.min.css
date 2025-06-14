@@ -1,0 +1,509 @@
+/* Optimized and Cleaned main.min.css for Wastetco */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+/* --- Variables --- */
+:root {
+  --general-background: #f8f9fa; /* Light grey background */
+  --section-background: #ffffff; /* White background for sections */
+  --main-dark-color: #212529; /* Dark grey for text/primary elements */
+  --accent-color: #007bff; /* Blue accent color */
+  --accent-color-dark: #0056b3; /* Darker blue for hover */
+  --text-color-light: #ffffff; /* White text for dark backgrounds */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Soft shadow color */
+  --border-color-light: #e0e0e0; /* Light border color */
+}
+
+/* --- Core Sticky Footer Layout --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-info, .account-page, .order-page, .notifications-page, .new-order-page, .redirect-page, .admin-page, .index-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- General Body & Font Styles --- */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--general-background);
+  color: var(--main-dark-color);
+  padding-top: 80px; /* Space for fixed header */
+  direction: rtl;
+  text-align: right;
+}
+
+/* --- Global Element Overrides & New Styles --- */
+
+/* Buttons */
+.btn {
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.grad-btn, .btn-info {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--text-color-light);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+.grad-btn:hover, .btn-info:hover {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+}
+
+.btn-light {
+    background-color: var(--text-color-light);
+    border: 1px solid var(--text-color-light);
+    color: var(--main-dark-color);
+    box-shadow: 0px 2px 5px var(--shadow-color);
+}
+.btn-light:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: var(--text-color-light);
+    box-shadow: 0px 2px 5px rgba(220, 53, 69, 0.2);
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: var(--text-color-light);
+    box-shadow: 0px 2px 5px rgba(40, 167, 69, 0.2);
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Text Colors */
+.grad-text {
+  color: var(--accent-color);
+}
+.text-dark {
+  color: var(--main-dark-color) !important;
+}
+.text-light {
+  color: var(--text-color-light) !important;
+}
+.text-primary, .text-info, .text-cyan {
+  color: var(--accent-color);
+}
+.text-success {
+    color: #28a745 !important;
+}
+.text-danger {
+    color: #dc3545 !important;
+}
+
+
+/* Header styles */
+.intro-header, .header {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+.header .navbar-light .navbar-brand img {
+  max-height: 50px;
+}
+.header .navbar-light .navbar-nav .nav-link {
+  color: var(--text-color-light);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar-light .navbar-nav .nav-link:hover {
+  color: var(--text-color-light);
+  background-color: var(--accent-color-dark);
+}
+
+/* General page content sections */
+.page-info .content,
+.account-page .page-content,
+.order-page .container section,
+.notifications-page .notifications,
+.new-order-page .page-content,
+.redirect-page .redirect,
+.admin-page .page-content section {
+  background-color: var(--section-background);
+  color: var(--main-dark-color);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  padding: 20px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.page-info .content h1, .page-info .content p, .page-info .content ul li {
+  color: var(--main-dark-color);
+}
+
+/* Login box specific styles */
+#loginBg .overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.login-box {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+.login-box h2 {
+  color: var(--text-color-light);
+}
+.login-box p {
+  font-size: 0.95em;
+}
+.login-box label {
+  color: var(--text-color-light);
+}
+.login-box input:not([type=checkbox]), .login-box select {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--text-color-light);
+  text-align: right;
+  border-radius: 4px;
+}
+.login-box input:not([type=checkbox])::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.login-box input:not([type=checkbox]):focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.login-box a.text-light {
+  color: var(--text-color-light);
+}
+.login-box a.text-light:hover {
+  color: #cccccc;
+}
+
+
+/* Account Page Specifics */
+.account-page .balance-summary {
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  background-color: var(--section-background);
+  color: var(--main-dark-color);
+  border-radius: 8px;
+}
+.account-page .balance-summary .balance-area {
+  border-left: 0;
+  padding: 15px;
+  box-shadow: none;
+  border-radius: 0;
+  border-right: 1px solid var(--border-color-light);
+}
+.account-page .balance-summary .balance-area:last-child {
+  border-right: none;
+}
+
+/* Nav Tabs */
+.account-page .nav-tabs .nav-item {
+  background-color: var(--section-background);
+}
+.account-page .nav-tabs .nav-link {
+  color: var(--main-dark-color);
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.account-page .nav-tabs .nav-link.active {
+  font-weight: bold;
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+}
+
+/* Page content elements */
+.account-page .page-content h4, .account-page .page-content label, .account-page .page-content a.text-dark {
+  color: var(--main-dark-color);
+}
+.account-page .page-content input:not([type=checkbox]):not([disabled]), .account-page .page-content textarea, .account-page .page-content select {
+  background-color: lighten(var(--general-background), 3%);
+  border: 1px solid lighten(var(--main-dark-color), 70%);
+  color: var(--main-dark-color);
+  border-radius: 4px;
+}
+.account-page .page-content input:disabled {
+  background-color: darken(var(--general-background), 2%);
+  color: lighten(var(--main-dark-color), 30%);
+}
+
+/* Index Page Section Spacing */
+.index-content {
+  padding-top: 15px;
+  margin-top: 15px;
+  
+  section {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px var(--shadow-color);
+    background-color: var(--section-background);
+    color: var(--main-dark-color);
+  }
+  .intro, .aboutus, .contactus, .sign {
+    background-color: var(--main-dark-color);
+    color: var(--text-color-light);
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .intro {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .why ul li::before {
+    color: var(--accent-color);
+  }
+  .payments .payment-method {
+    background-color: lighten(var(--main-dark-color), 10%);
+    color: var(--text-color-light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Other Pages General Sections */
+.order-page .container section, .notifications-page .notifications,
+.new-order-page .page-content, .redirect-page .redirect, .admin-page .page-content section {
+  background-color: var(--section-background);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: var(--main-dark-color);
+}
+.order-page .container table td {
+  color: var(--main-dark-color);
+}
+
+// Chat-like message styling - NEW ADDITIONS
+.messages-area {
+    display: flex;
+    flex-direction: column; // Arrange messages vertically
+    gap: 10px; // Space between messages
+    padding: 15px; // Padding around the chat area
+    background-color: var(--general-background); // Light background for chat area
+    border-radius: 8px;
+    max-height: 400px; // Example fixed height for scroll, adjust as needed
+    overflow-y: auto; // Add scroll if content overflows
+    border: 1px solid var(--border-color-light);
+}
+
+.messages-item {
+    max-width: 75%; // Limit message bubble width
+    padding: 10px 15px; // Padding inside message bubble
+    border-radius: 20px; // Rounded corners for bubble effect
+    word-wrap: break-word; // Ensure long words wrap
+    font-size: 0.95em; // Slightly smaller font for messages
+    line-height: 1.4;
+    position: relative; // For timestamp positioning
+}
+
+.mess-sender {
+    background-color: var(--accent-color); // Blue background for sender
+    color: var(--text-color-light); // White text
+    align-self: flex-end; // Align sender messages to the right
+    border-bottom-right-radius: 5px; // Slightly less round at the bottom-right for sender
+    margin-right: 5px; // Small margin from the edge
+}
+
+.mess-receiver {
+    background-color: #e2e2e2; // Light grey background for receiver
+    color: var(--main-dark-color); // Dark text
+    align-self: flex-start; // Align receiver messages to the left
+    border-bottom-left-radius: 5px; // Slightly less round at the bottom-left for receiver
+    margin-left: 5px; // Small margin from the edge
+}
+
+.message-time {
+    display: block; // Place time on a new line
+    font-size: 0.75em; // Smaller font for timestamp
+    color: rgba(255, 255, 255, 0.7); // Lighter color for sender's time
+    margin-top: 5px;
+    text-align: left; // Align time to the left within the bubble
+}
+
+.mess-receiver .message-time {
+    color: rgba(0, 0, 0, 0.5); // Darker color for receiver's time
+}
+
+// Existing message styles, potentially overridden by new ones
+// These existing rules are now less specific than the new ones above,
+// so the new rules will take precedence.
+.order-page .container .mess-sender {
+  background-color: var(--accent-color);
+  color: var(--text-color-light);
+}
+.order-page .container .mess-receiver {
+  background-color: lighten(var(--main-dark-color), 30%);
+  color: var(--text-color-light);
+}
+
+
+/* Notifications specific styles */
+.notifications-page .notifications-item {
+  background-color: var(--section-background);
+  color: var(--main-dark-color);
+  border-bottom: 2px dashed var(--border-color-light);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+.notifications-page .notifications-item a {
+  color: var(--main-dark-color);
+}
+
+/* Sidebar styles */
+.sidebar .sidebar-part {
+  background-color: var(--section-background);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  font-size: 0.9em;
+  border-radius: 8px;
+  color: var(--main-dark-color);
+}
+.sidebar .sidebar-part .sidebar-title {
+  padding: 12px;
+  border-bottom: 2px solid var(--border-color-light);
+  font-weight: bold;
+  text-align: center;
+  color: var(--main-dark-color);
+}
+.sidebar .sidebar-part .last-orders-item, .sidebar .sidebar-part .last-finance-process-item {
+  padding: 8px;
+  border-bottom: 1px dashed var(--border-color-light);\n  border-radius: 8px;
+}
+.sidebar .sidebar-part .last-orders-item:last-child, .sidebar .sidebar-part .last-finance-process-item:last-child {
+  border-bottom: none;
+}
+.sidebar .sidebar-part a.text-dark {
+  color: var(--main-dark-color);
+}
+.sidebar .sidebar-part .fa-plus, .sidebar .sidebar-part .fa-minus, .sidebar .sidebar-part .fa-ban {
+  color: var(--accent-color);
+}
+.sidebar .sidebar-part .text-secondary {
+    color: var(--main-dark-color);
+}
+
+
+/* Footer styles */
+footer {
+  background-color: var(--main-dark-color);
+  padding-top: 20px;
+  color: var(--text-color-light);
+  border-radius: 0;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: auto; /* Key for sticky footer: Pushes footer to bottom */
+}
+footer a {
+  color: var(--text-color-light);
+  transition: all 0.3s ease-in-out;
+}
+footer a:hover {
+  color: #cccccc;
+}
+
+/* Cookie consent bar */
+.cookie {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  padding: 20px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.cookie .btn-success {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--text-color-light);
+}
+.cookie .btn-success:hover {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+}
+
+/* --- Bootstrap Overrides for new color palette --- */
+/* Ensure Bootstrap elements use our new variables */
+.text-primary, .text-info, .text-cyan {
+  color: var(--accent-color);
+}
+.text-dark {
+  color: var(--main-dark-color);
+}
+.text-light {
+  color: var(--text-color-light);
+}
+
+/* General overrides for Bootstrap's rounded corners */
+/* Applying 8px border-radius to almost everything where it makes sense */
+.btn, .card, .modal-content, .dropdown-menu, .form-control, .custom-select, .input-group-text, .form-check-input, .custom-control-label::before, .custom-file-label, .custom-file-label::after {
+  border-radius: 8px;
+}
+
+/* Specific adjustments for input groups to maintain structure */
+.input-group > .custom-file, .input-group > .custom-select, .input-group > .form-control, .input-group > .form-control-plaintext {
+    border-radius: 8px;
+}
+.input-group > .custom-file:not(:last-child) .custom-file-label,
+.input-group > .custom-file:not(:last-child) .custom-file-label::after,
+.input-group > .custom-select:not(:last-child),
+.input-group > .form-control:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group > .custom-file:not(:first-child) .custom-file-label,
+.input-group > .custom-select:not(:first-child),
+.input-group > .form-control:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Table styles */
+.table {
+  color: var(--main-dark-color);
+}
+.table thead th {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  border-color: darken(var(--main-dark-color), 5%);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.table-bordered th, .table-bordered td {
+  border-color: var(--border-color-light);
+}
+
+/* Font Awesome Icons */
+.fa, .fas, .far, .fab {
+  color: var(--main-dark-color);
+}
+
+/* Specific icon colors */
+.header .navbar-nav .nav-link .fas,\n.login-box label .fas,\n.login-box input .fas,\n.login-box a.text-light .fas,\n.notifications-page .notifications-item .fas,\n.messages-item .user-area .fa-stack .fas,\n.order-page .container .mess-sender .fas,\n.order-page .container .mess-receiver .fas {\n  color: var(--text-color-light);\n}\n\n.fa-check-circle.text-success {\n    color: #28a745;\n}\n.fa-times.text-danger {\n    color: #dc3545;\n}\n```
+

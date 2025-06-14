@@ -1,0 +1,24 @@
+{
+    "name": "alaa/paymob-sdk",
+    "description": "Api for paymob payment getaway with php",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alaa\\Paymob\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alaa-Hany",
+            "email": "elboray.alaa1@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "nesbot/carbon": "^2.53",
+        "ext-json": "*",
+        "tightenco/collect": "^8.34"
+    }
+}

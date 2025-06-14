@@ -1,0 +1,216 @@
+/* Optimized and Cleaned main.min.css for Wastetco */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+/* --- Variables --- */
+:root {
+  --general-background: #f8f9fa; /* Light grey background */
+  --section-background: #ffffff; /* White background for sections */
+  --main-dark-color: #212529; /* Dark grey for text/primary elements */
+  --accent-color: #007bff; /* Blue accent color */
+  --accent-color-dark: #0056b3; /* Darker blue for hover */
+  --text-color-light: #ffffff; /* White text for dark backgrounds */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Soft shadow color */
+  --border-color-light: #e0e0e0; /* Light border color */
+}
+
+/* --- Core Sticky Footer Layout --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-info, .account-page, .order-page, .notifications-page, .new-order-page, .redirect-page, .admin-page, .index-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- General Body & Font Styles --- */
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: var(--general-background);
+  color: var(--main-dark-color);
+  padding-top: 80px; /* Space for fixed header */
+  direction: rtl;
+  text-align: right;
+}
+
+/* --- Global Element Overrides & New Styles --- */
+
+/* Buttons */
+.btn {
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.grad-btn, .btn-info {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--text-color-light);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+.grad-btn:hover, .btn-info:hover {
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+}
+
+.btn-light {
+    background-color: var(--text-color-light);
+    border: 1px solid var(--text-color-light);
+    color: var(--main-dark-color);
+    box-shadow: 0px 2px 5px var(--shadow-color);
+}
+.btn-light:hover {
+    background-color: #f0f0f0;
+    border-color: #f0f0f0;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: var(--text-color-light);
+    box-shadow: 0px 2px 5px rgba(220, 53, 69, 0.2);
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: var(--text-color-light);
+    box-shadow: 0px 2px 5px rgba(40, 167, 69, 0.2);
+}
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Text Colors */
+.grad-text {
+  color: var(--accent-color);
+}
+.text-dark {
+  color: var(--main-dark-color) !important;
+}
+.text-light {
+  color: var(--text-color-light) !important;
+}
+.text-primary, .text-info, .text-cyan {
+  color: var(--accent-color);
+}
+.text-success {
+    color: #28a745 !important;
+}
+.text-danger {
+    color: #dc3545 !important;
+}
+
+
+/* Header styles */
+.intro-header, .header {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  z-index: 1030;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0px 4px 10px var(--shadow-color);
+}
+.header .navbar-light .navbar-brand img {
+  max-height: 50px;
+}
+.header .navbar-light .navbar-nav .nav-link {
+  color: var(--text-color-light);
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar-light .navbar-nav .nav-link:hover {
+  color: var(--text-color-light);
+  background-color: var(--accent-color-dark);
+}
+
+/* General page content sections */
+.page-info .content,
+.account-page .page-content,
+.order-page .container section,
+.notifications-page .notifications,
+.new-order-page .page-content,
+.redirect-page .redirect,
+.admin-page .page-content section {
+  background-color: var(--section-background);
+  color: var(--main-dark-color);
+  box-shadow: 0px 4px 10px var(--shadow-color);
+  padding: 20px;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.page-info .content h1, .page-info .content p, .page-info .content ul li {
+  color: var(--main-dark-color);
+}
+
+/* Login box specific styles */
+#loginBg .overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.login-box {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+.login-box h2 {
+  color: var(--text-color-light);
+}
+.login-box p {
+  font-size: 0.95em;
+}
+.login-box label {
+  color: var(--text-color-light);
+}
+.login-box input:not([type=checkbox]), .login-box select {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--text-color-light);
+  text-align: right;
+  border-radius: 4px;
+}
+.login-box input:not([type=checkbox])::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.login-box input:not([type=checkbox]):focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);\n}\n.login-box a.text-light {\n  color: var(--text-color-light);\n}\n.login-box a.text-light:hover {\n  color: #cccccc;\n}\n\n\n/* Account Page Specifics */\n.account-page .balance-summary {\n  box-shadow: 0px 4px 10px var(--shadow-color);\n  background-color: var(--section-background);\n  color: var(--main-dark-color);\n  border-radius: 8px;\n}\n.account-page .balance-summary .balance-area {\n  border-left: 0;\n  padding: 15px;\n  box-shadow: none;\n  border-radius: 0;\n  border-right: 1px solid var(--border-color-light);\n}\n.account-page .balance-summary .balance-area:last-child {\n  border-right: none;\n}\n\n/* Nav Tabs */\n.account-page .nav-tabs .nav-item {\n  background-color: var(--section-background);\n}\n.account-page .nav-tabs .nav-link {\n  color: var(--main-dark-color);\n  border-radius: 4px;\n  margin-left: 5px;\n}\n.account-page .nav-tabs .nav-link.active {\n  font-weight: bold;\n  background-color: var(--main-dark-color);\n  color: var(--text-color-light);\n}\n\n/* Page content elements */\n.account-page .page-content h4, .account-page .page-content label, .account-page .page-content a.text-dark {\n  color: var(--main-dark-color);\n}\n.account-page .page-content input:not([type=checkbox]):not([disabled]), .account-page .page-content textarea, .account-page .page-content select {\n  background-color: lighten(var(--general-background), 3%);\n  border: 1px solid lighten(var(--main-dark-color), 70%);\n  color: var(--main-dark-color);\n  border-radius: 4px;\n}\n.account-page .page-content input:disabled {\n  background-color: darken(var(--general-background), 2%);\n  color: lighten(var(--main-dark-color), 30%);\n}\n\n/* Index Page Section Spacing */\n.index-content {\n  padding-top: 15px;\n  margin-top: 15px;\n  \n  section {\n    margin-bottom: 40px;\n    padding-top: 40px;\n    padding-bottom: 40px;\n    border-radius: 8px;\n    box-shadow: 0px 4px 10px var(--shadow-color);\n    background-color: var(--section-background);\n    color: var(--main-dark-color);\n  }\n  .intro, .aboutus, .contactus, .sign {\n    background-color: var(--main-dark-color);\n    color: var(--text-color-light);\n    box-shadow: none;\n    border-radius: 0;\n    margin-top: 0;\n    margin-bottom: 40px;\n  }\n  .intro {\n    padding-top: 60px;\n    padding-bottom: 60px;\n  }\n  .why ul li::before {\n    color: var(--accent-color);\n  }\n  .payments .payment-method {\n    background-color: lighten(var(--main-dark-color), 10%);\n    color: var(--text-color-light);\n    padding: 30px;\n    border-radius: 8px;\n    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);\n  }\n}\n\n/* Other Pages General Sections */\n.order-page .container section, .notifications-page .notifications,\n.new-order-page .page-content, .redirect-page .redirect, .admin-page .page-content section {\n  background-color: var(--section-background);\n  box-shadow: 0px 4px 10px var(--shadow-color);\n  padding: 20px;\n  margin-bottom: 20px;\n  border-radius: 8px;\n  color: var(--main-dark-color);\n}\n.order-page .container table td {\n  color: var(--main-dark-color);\n}\n\n// Chat-like message styling - ORIGINAL (prior to any specific chat bubble mods)\n.messages-area { /* This block might not exist in original, or be generic */\n    /* Remove previous chat-specific styles */\n}\n\n.messages-item {\n    /* Remove previous chat-specific styles */\n}\n\n.mess-sender {\n  background-color: var(--accent-color);\n  color: var(--text-color-light);\n}\n.mess-receiver {\n  background-color: lighten(var(--main-dark-color), 30%);\n  color: var(--text-color-light);\n}\n\n.message-time {\n    /* Remove previous chat-specific styles */\n}\n\n\n/* Notifications specific styles */\n.notifications-page .notifications-item {\n  background-color: var(--section-background);\n  color: var(--main-dark-color);\n  border-bottom: 2px dashed var(--border-color-light);\n  padding-bottom: 10px;\n  margin-bottom: 15px;\n  border-radius: 8px;\n}\n.notifications-page .notifications-item a {\n  color: var(--main-dark-color);\n}\n\n/* Sidebar styles */\n.sidebar .sidebar-part {\n  background-color: var(--section-background);\n  box-shadow: 0px 4px 10px var(--shadow-color);\n  font-size: 0.9em;\n  border-radius: 8px;\n  color: var(--main-dark-color);\n}\n.sidebar .sidebar-part .sidebar-title {\n  padding: 12px;\n  border-bottom: 2px solid var(--border-color-light);\n  font-weight: bold;\n  text-align: center;\n  color: var(--main-dark-color);\n}\n.sidebar .sidebar-part .last-orders-item, .sidebar .sidebar-part .last-finance-process-item {\n  padding: 8px;\n  border-bottom: 1px dashed var(--border-color-light);\n  border-radius: 8px;\n}\n.sidebar .sidebar-part .last-orders-item:last-child, .sidebar .sidebar-part .last-finance-process-item:last-child {\n  border-bottom: none;\n}\n.sidebar .sidebar-part a.text-dark {\n  color: var(--main-dark-color);\n}\n.sidebar .sidebar-part .fa-plus, .sidebar .sidebar-part .fa-minus, .sidebar .sidebar-part .fa-ban {\n  color: var(--accent-color);\n}\n.sidebar .sidebar-part .text-secondary {\n    color: var(--main-dark-color);\n}\n\n\n/* Footer styles */\nfooter {\n  background-color: var(--main-dark-color);\n  padding-top: 20px;\n  color: var(--text-color-light);\n  border-radius: 0;\n  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);\n  margin-top: auto; /* Key for sticky footer: Pushes footer to bottom */\n}\nfooter a {\n  color: var(--text-color-light);\n  transition: all 0.3s ease-in-out;\n}\nfooter a:hover {\n  color: #cccccc;\n}\n\n/* Cookie consent bar */\n.cookie {\n  background-color: var(--main-dark-color);\n  color: var(--text-color-light);\n  padding: 20px;\n  border-radius: 5px;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  z-index: 9999;\n}\n.cookie .btn-success {\n  background-color: var(--accent-color);\n  border-color: var(--accent-color);\n  color: var(--text-color-light);\n}\n.cookie .btn-success:hover {\n  background-color: var(--accent-color-dark);\n  border-color: var(--accent-color-dark);\n}\n\n/* --- Bootstrap Overrides for new color palette --- */\n/* Ensure Bootstrap elements use our new variables */\n.text-primary, .text-info, .text-cyan {\n  color: var(--accent-color);\n}\n.text-dark {\n  color: var(--main-dark-color);\n}\n.text-light {\n  color: var(--text-color-light);\n}\n\n/* General overrides for Bootstrap's rounded corners */\n/* Applying 8px border-radius to almost everything where it makes sense */\n.btn, .card, .modal-content, .dropdown-menu, .form-control, .custom-select, .input-group-text, .form-check-input, .custom-control-label::before, .custom-file-label, .custom-file-label::after {\n  border-radius: 8px;\n}\n\n/* Specific adjustments for input groups to maintain structure */\n.input-group > .custom-file, .input-group > .custom-select, .input-group > .form-control, .input-group > .form-control-plaintext {\n    border-radius: 8px;\n}\n.input-group > .custom-file:not(:last-child) .custom-file-label,\n.input-group > .custom-file:not(:last-child) .custom-file-label::after,\n.input-group > .custom-select:not(:last-child),\n.input-group > .form-control:not(:last-child) {\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n}\n.input-group > .custom-file:not(:first-child) .custom-file-label,\n.input-group > .custom-select:not(:first-child),\n.input-group > .form-control:not(:first-child) {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n}\n\n/* Table styles */\n.table {\n  color: var(--main-dark-color);\n}\n.table thead th {\n  background-color: var(--main-dark-color);\n  color: var(--text-color-light);\n  border-color: darken(var(--main-dark-color), 5%);\n}\n.table-striped tbody tr:nth-of-type(odd) {\n  background-color: rgba(0, 0, 0, 0.03);\n}\n.table-bordered th, .table-bordered td {\n  border-color: var(--border-color-light);\n}\n\n/* Font Awesome Icons */\n.fa, .fas, .far, .fab {\n  color: var(--main-dark-color);\n}\n\n/* Specific icon colors */\n.header .navbar-nav .nav-link .fas,\n.login-box label .fas,\n.login-box input .fas,\n.login-box a.text-light .fas,\n.notifications-page .notifications-item .fas,\n.messages-item .user-area .fa-stack .fas,\n.order-page .container .mess-sender .fas,\n.order-page .container .mess-receiver .fas {\n  color: var(--text-color-light);\n}\n\n.fa-check-circle.text-success {\n    color: #28a745;\n}\n.fa-times.text-danger {\n    color: #dc3545;\n}\n```
+/* Ensure cursor changes to pointer for logout link */
+.navbar-nav .nav-item #logout {
+    cursor: pointer !important;
+}
+/* Apply styles to all navigation links for consistent hover effect */
+.navbar-nav .nav-item .nav-link {
+    display: block; /* يجعل الرابط يتصرف ككتلة ليمتد على العرض المتاح داخل عنصر القائمة */
+    padding: 0.5rem 1rem; /* أضف padding ليتسع الزر ويظهر الخلفية بشكل جيد. يمكنك تعديل القيم حسب الحاجة */
+    cursor: pointer !important; /* هذا يضمن تغيير شكل الماوس إلى كف اليد لجميع الروابط */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* إضافة انتقال سلس للتأثير */
+    text-align: center; /* لضمان توسيط النص والأيقونة داخل الزر */
+    box-sizing: border-box; /* للتأكد أن الـ padding لا يزيد من حجم الزر الكلي بشكل غير متوقع */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: var(--accent-color-dark) !important; /* تطبيق اللون اللبني (الأزرق الداكن) للخلفية عند التمرير */
+    color: var(--text-color-light) !important; /* تغيير لون النص إلى الأبيض لزيادة التباين */
+    text-decoration: none !important; /* إزالة أي خط تحت النص قد يظهر تلقائياً على الروابط */
+}
+
+/* لضمان أن الأيقونات داخل روابط التنقل تأخذ نفس لون النص */
+.navbar-nav .nav-item .nav-link .fas {
+    color: inherit !important;
+}

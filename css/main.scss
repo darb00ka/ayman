@@ -1,0 +1,140 @@
+/* Optimized and Cleaned main.min.css for Wastetco */
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+/* --- Variables --- */
+:root {
+  --general-background: #f8f9fa; /* Light grey background */
+  --section-background: #ffffff; /* White background for sections */
+  --main-dark-color: #212529; /* Dark grey for text/primary elements */
+  --accent-color: #007bff; /* Blue accent color - تم تغيير اللون هنا */
+  --accent-color-dark: #0056b3; /* Darker blue for hover */
+  --text-color-light: #ffffff; /* White text for dark backgrounds */
+  --shadow-color: rgba(0, 0, 0, 0.08); /* Soft shadow color */
+  --border-color-light: #e0e0e0; /* Light border color */
+}
+
+/* --- Core Sticky Footer Layout --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-info, .account-page, .order-page, .notifications-page, .new-order-page, .redirect-page, .admin-page, .index-content {
+  flex: 1 0 auto; /* Allows content to grow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Universal styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    color: var(--main-dark-color);
+    background-color: var(--general-background);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: var(--accent-color-dark);
+    text-decoration: underline;
+}
+
+/* Bootstrap Overrides (Adjusted to use CSS variables) */
+.btn-primary {
+  color: var(--text-color-light);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.btn-primary:hover {
+  color: var(--text-color-light);
+  background-color: var(--accent-color-dark);
+  border-color: var(--accent-color-dark);
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Adjusted shadow to match new accent color */
+}
+
+/* Custom Card styles */
+.custom-card {
+  background-color: var(--section-background);
+  border: 1px solid var(--border-color-light);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-color) 0px 0px 10px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.custom-card-header {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.custom-card-body {
+  padding: 1.25rem;
+}
+
+/* Input group styles */
+.input-group > .custom-file:not(:last-child) .custom-file-label,
+.input-group > .custom-file:not(:last-child) .custom-file-label::after,
+.input-group > .custom-select:not(:last-child),
+.input-group > .form-control:not(:last-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.input-group > .custom-file:not(:first-child) .custom-file-label,
+.input-group > .custom-select:not(:first-child),
+.input-group > .form-control:not(:first-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Table styles */
+.table {
+  color: var(--main-dark-color);
+}
+.table thead th {
+  background-color: var(--main-dark-color);
+  color: var(--text-color-light);
+  border-color: darken(var(--main-dark-color), 5%);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+.table-bordered th, .table-bordered td {
+  border-color: var(--border-color-light);
+}
+
+/* Font Awesome Icons */
+.fa-check {
+  color: #28a745; /* Bootstrap success green */
+}
+
+.fa-times {
+  color: #dc3545; /* Bootstrap danger red */
+}
+
+.navbar-nav .nav-item #logout {
+    cursor: pointer;
+}
+}
